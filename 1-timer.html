@@ -5,8 +5,12 @@
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Timer</title>
-      <script type="module" crossorigin src="/goit-advancedjs-hw-02/assets/modulepreload-polyfill-Dezn_h7o.js"></script>
-      <link rel="stylesheet" crossorigin href="/goit-advancedjs-hw-02/assets/styles-P-wLF-c-.css">
+      <script type="module" crossorigin src="/goit-advancedjs-hw-02/1-timer.js"></script>
+      <link rel="modulepreload" crossorigin href="/goit-advancedjs-hw-02/assets/rolldown-runtime-Bh1tDfsg.js">
+      <link rel="modulepreload" crossorigin href="/goit-advancedjs-hw-02/assets/modulepreload-polyfill-Dezn_h7o.js">
+      <link rel="modulepreload" crossorigin href="/goit-advancedjs-hw-02/assets/vendor-CSGngE8P.js">
+      <link rel="stylesheet" crossorigin href="/goit-advancedjs-hw-02/assets/vendor-B8bANzpe.css">
+      <link rel="stylesheet" crossorigin href="/goit-advancedjs-hw-02/assets/styles-BWZFg9Hg.css">
     </head>
     <body>
         <header>
@@ -27,8 +31,33 @@
         </header>
         <main>
             <div class="container">
-                <h1>Timer</h1>
+                <h1 class="title">
+                    <span class="title-gradient">Timer</span>
+                </h1>
             </div>
+            <section class="timer-hero container">
+                <input type="text" id="datetime-picker" />
+                <button type="button" data-start>Start</button>
+
+                <div class="timer">
+                    <div class="field">
+                        <span class="value" data-days>00</span>
+                        <span class="label">Days</span>
+                    </div>
+                    <div class="field">
+                        <span class="value" data-hours>00</span>
+                        <span class="label">Hours</span>
+                    </div>
+                    <div class="field">
+                        <span class="value" data-minutes>00</span>
+                        <span class="label">Minutes</span>
+                    </div>
+                    <div class="field">
+                        <span class="value" data-seconds>00</span>
+                        <span class="label">Seconds</span>
+                    </div>
+                </div>
+            </section>
         </main>
 
     </body>
