@@ -4,6 +4,8 @@ import 'flatpickr/dist/flatpickr.min.css';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
+import errorIcon from '../img/error.svg';
+
 const dateInput = document.querySelector('input#datetime-picker');
 const startBtn = document.querySelector('button[data-start]');
 const daysEl = document.querySelector('span[data-days]');
@@ -40,12 +42,14 @@ flatpickr(dateInput, {
         } else {
             userSelectedDate = null;
             startBtn.disabled = true;
-            iziToast.error({
+            iziToast.show({
                 message: 'Please choose a date in the future',
                 messageColor: '#fff',
                 messageSize: '18',
                 backgroundColor: '#ef4040',
+                iconUrl: errorIcon,
                 position: 'topRight',
+                close: false,
                 timeout: 3000,
             });
         }
